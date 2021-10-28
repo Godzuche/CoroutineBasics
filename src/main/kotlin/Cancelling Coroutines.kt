@@ -30,7 +30,7 @@ fun main (args: Array<String>) {
 //                    job1.cancel() //calling cancel on the coroutine
 
                     //call cancel on the scope since  both coroutines belong to the same scope(parent)
-                    scope.cancel()
+                    scope.cancel() //this throws a CancellationException that is not logged to the console
                     println("Final value of job1 was $i")
                     println("Final value of job2 was $j")
                 }
