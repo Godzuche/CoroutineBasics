@@ -15,12 +15,13 @@ fun main(args: Array<String>) {
 
         //coroutine1.join() //so the app never exits until the coroutine1 is complete
         val coroutines = listOf(coroutine1, coroutine2)
-
+        
         println("List of coroutine jobs")
         for (coroutine in coroutines) {
             println(coroutine)
         }
 
+        //referencing coroutines using job
         println("Children of CoroutineScope")
         for (child in scopeJob.children) {
             println(child)
